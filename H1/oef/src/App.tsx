@@ -3,6 +3,7 @@ import ExerciseOne from './ExerciseOne/ExerciseOne.tsx'
 import ExerciseTwo from './ExerciseTwo/ExerciseTwo.tsx'
 import ExerciseThree from './ExerciseThree/ExerciseThree.tsx'
 import ExerciseFour from './ExerciseFour/ExerciseFour.tsx'
+import ExerciseFive from './ExerciseFive/ExerciseFive.tsx'
 
 function App() {
 
@@ -20,7 +21,9 @@ function App() {
         <Exercise title={'Exercise 4: Number grid'} background={'#77EEEE'}>
             <ExerciseFour/>
         </Exercise>
-        <Exercise title={'Exercise 5: Comment card'}/>
+        <Exercise title={'Exercise 5: Comment card'}>
+            <ExerciseFive/>
+        </Exercise>
     </>
   )
 }
