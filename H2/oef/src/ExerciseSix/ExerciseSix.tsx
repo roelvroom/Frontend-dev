@@ -6,8 +6,8 @@ interface ExerciseSixProps {
 
 const ExerciseSix: FunctionComponent<ExerciseSixProps> = () => {
     return (
-        <>
-        </>
+        <div className={'exercise'}>
+        </div>
     )
 }
 
