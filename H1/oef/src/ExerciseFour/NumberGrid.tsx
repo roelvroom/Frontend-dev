@@ -9,9 +9,9 @@ const NumberGrid: FunctionComponent<NumberGridProps> = ({n}) => {
     for (let i=0;i<n;i++){
         const row: ReactNode[] = []
         for (let j=0;j<n;j++){
-            row.push(<button className={'square'}>{i * n + j + 1}</button>)
+            row.push(<button key={i * n + j + 1} className={'square'}>{i * n + j + 1}</button>)
         }
-        output.push(<div className={"grid-row"}>{row}</div>)
+        output.push(<div key={i} className={"grid-row"}>{row}</div>)
     }
 
     return (

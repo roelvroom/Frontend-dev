@@ -9,7 +9,7 @@ interface MultiplicationTableProps {
 const MultiplicationTable: FunctionComponent<MultiplicationTableProps> = ({table}) => {
     const output = []
     for (let i=1; i<11;i++){
-        output.push(<Row factor1={i} factor2={table}/>)
+        output.push(<Row key={i * table} factor1={i} factor2={table}/>)
     }
 
     return (
