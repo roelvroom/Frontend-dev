@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {FunctionComponent} from 'react'
+import {FunctionComponent, useState} from 'react'
 
 const Calculator = styled.div`
   padding: 1.5em 2em;
@@ -34,10 +34,26 @@ const CalculatorScreen = styled.div`
 
 const buttons = ['7', '8', '9', '4', '5', '6', '1', '2', '3', 'C', '0', 'Del']
 
+
 const ExerciseSix: FunctionComponent = () => {
+    const [screen, setScreen] = useState<string>('')
+
+    const ButtonHandeler = (button: string) => {
+        if (button == 'C'){
+            setScreen('')
+        }else if (button == 'Del'){
+            setScreen(old => old.slice(0, old.length -1))
+        }else{
+            setScreen(old => old + button)
+        }
+    }
     return (
-        <>
-        </>
+        <Calculator>
+            <CalculatorScreen>
+                {screen}
+            </CalculatorScreen>
+            {buttons.map(b => <CalculatorButton key={b} onClick={() => ButtonHandeler(b)}>{b}</CalculatorButton>)}
+        </Calculator>
     )
 }
 
