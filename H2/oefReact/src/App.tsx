@@ -1,6 +1,7 @@
 import Exercise from './Exercise/Exercise'
-import ExerciseSeven from './ExerciseSeven/ExerciseSeven'
 import ExerciseSix from './ExerciseSix/ExerciseSix'
+import ExerciseSeven from './ExerciseSeven/ExerciseSeven'
+import ExerciseEight from './ExerciseEight/ExerciseEight'
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
         <ExerciseSeven/>
       </Exercise>
       <Exercise title='Exercise 8:'>
-        
+        <ExerciseEight/>
       </Exercise>
       <Exercise title='Exercise 9:'>
         

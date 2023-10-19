@@ -1,4 +1,5 @@
 import styled, {keyframes} from 'styled-components'
+import './ExerciseEightStyle.css'
 
 const slideOutLeft = keyframes`
   0% {
