@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import {FunctionComponent} from 'react'
+import {FunctionComponent, useState} from 'react'
+import './Range.css'
+import Slider from './slider'
 
 const BmiLabel = styled.div`
   font-family: Verdana, serif;
@@ -21,9 +23,20 @@ const BMIContainer = styled.div`
 `
 
 const ExerciseSeven: FunctionComponent = () => {
+    const [height, setHeight] = useState<number>(173)
+    const [mass, setMass] = useState<number>(80)
+    
+
     return (
-        <>
-        </>
+        <BMIContainer>
+          <BmiLabel>Height: {height}</BmiLabel>
+          <Slider min={90} max={210} value={height} changeHandler={evt => setHeight(Number(evt.currentTarget.value))}/>
+
+          <BmiLabel>Mass: {mass}</BmiLabel>
+          <Slider min={40} max={150} value={mass} changeHandler={evt => setMass(Number(evt.currentTarget.value))}/>
+
+          <BmiLabel>BMI: {calculateBMI(height, mass)}</BmiLabel>
+        </BMIContainer>
     )
 }
 
