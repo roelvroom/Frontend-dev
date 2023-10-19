@@ -1,10 +1,18 @@
-import React from 'react'
-
-const slider = () => {
-  return (
-    <>
-    </>
-  )
+interface sliderProps {
+    value: number,
+    min: number,
+    max: number,
+    changeHandler: () =>{
+        
+    }
 }
 
-export default slider
+function slider() {
+
+    return ( 
+        <>
+        </>
+     );
+}
+
+export default slider;
